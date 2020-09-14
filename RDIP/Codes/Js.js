@@ -20,3 +20,46 @@ var text ='{"eng":['+'{"a":"John ate an apple before afternoon" ,"b": "some stud
 '{"a":"none","b":"none","c":"बताया उसे मैंने कि सो रहा है राम","d":"none","e":"none","f":"none","g":"none"}]}';
  var total=["John ate an apple before afternoon","some students like to study in the night","John and Mary went to church","John went to church after eating","did he go to market","the woman who called my sister sells cosmetics","John goes to the library and studies","John ate an apple so did she","the teacher returned the book after she noticed the error","I told her that I bought a book yesterday"];
 var totalh=["राम और श्याम बाजार गयें","राम सोया और श्याम भी","मैंने उसे बताया कि राम सो रहा है","राम खाकर सोया","बिल्लियों को मारकर कुत्ता सो गया"  ,"एक लाल किताब वहाँ है","एक बड़ी सी किताब वहाँ है"];
+ var rnd = Math.floor(Math.random()*10); 
+       var line = JSON.parse(text);
+       var rnds = Math.floor(Math.random()*7);
+         var lines = JSON.parse(texth);
+       var e = total[rnd];
+       var h = totalh[rnds];
+       var r;
+       var c = 0;
+     var g = 0; 
+        function GetSelectedTextValue(language) {
+        var lang = language.value;
+        if(lang == "1"){
+          alert("Select language");
+          return false;
+        }
+        if(lang == "2"){
+          document.getElementById("demo").innerHTML = "Form a sentence(Declarative or Interrogative or any other type) from the given words";
+      document.getElementById("dem").innerHTML = "(select the buttons in proper order)"
+      document.getElementById("input").innerHTML = "";
+       r=2;
+       if(g == 1){
+          alert("please reload the page and select language");
+         return false; 
+       }
+       else{
+       sentence(e);
+     } 
+        }
+        if(lang == "3"){
+           
+           document.getElementById("demo").innerHTML = "Form a sentence(Declarative or Interrogative or any other type) from the given words";
+      document.getElementById("dem").innerHTML = "(select the buttons in proper order)"
+      document.getElementById("input").innerHTML = "";
+        r = 3;
+       if(g == 1){
+        
+        alert("please reload the page and select language");
+       return false; 
+           }
+       else{
+       sentenceh(h); }
+        }
+           } 
